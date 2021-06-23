@@ -1,0 +1,32 @@
+2.1
+	SELECT apellido FROM empleados;
+2.2
+	SELECT DISTINCT apellido FROM empleados;
+2.3
+	SELECT * FROM empleados WHERE apellido = "Lopez";
+2.4
+	SELECT * FROM empleados WHERE apellido = "Lopez" or apellido ="Perez";
+2.5
+	SELECT * FROM empleados WHERE num_depto = 14;
+2.6
+	SELECT * FROM empleados WHERE num_depto = 14 or num_depto = 77;
+2.7
+	SELECT * FROM empleados WHERE apellido like 'P%';
+2.8
+	SELECT SUM(Presupuesto) FROM empleados;
+2.9
+	SELECT dni, apellido, nombre, nombre_depto FROM empleados;
+2.10
+	SELECT dni, apellido, nombre, nombre_depto, presupuesto FROM empleados;
+2.11
+	SELECT apellido, nombre FROM empleados WHERE presupuesto > 60000;
+2.12
+	INSERT INTO `empleados` (`dni`, `nombre`, `apellido`, `num_depto`, `nombre_depto`, `presupuesto`) VALUES (89267109, 'Esther', 'Vazquez', 11, 'Calidad', 40000)
+2.13
+	UPDATE`empleados` set presupuesto = (presupuesto - (presupuesto*.01));
+2.14
+	UPDATE`empleados` set nombre_depto = 'Informática', num_depto = 14 where num_depto = 77;
+2.15
+	delete from `empleados` where num_depto = 14;
+2.16
+	delete from `empleados` where presupuesto > 90000;
